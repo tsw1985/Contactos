@@ -7,6 +7,7 @@ class Contact(models.Model):
     email = models.CharField(max_length=100 , verbose_name='Email')
     phone = models.CharField(max_length=9 , verbose_name='Telefono')
     # photo = models.ImageField(upload_to='Imagenes' , null=True, blank=True,verbose_name='Imágen')
+    image = models.ImageField(upload_to='Imagenes' , null=True, blank=True, verbose_name='Imágen')
 
     def __unicode__(self):
         return self.name

@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block body %}
+
+
+    <h1>Todos los contactos</h1>
+
+    {% for contact in contact_list %}
+
+<div style="border: 1px solid black; margin: 50px; ">
+
+
+    <div class="form-group">
+        <label for="">Foto</label>
+        <label class="form-control">{{ contact.image }}</label>
+    </div>
+
+
+    <div class="form-group">
+        <label for="">Nombre contacto</label>
+        <label class="form-control">{{ contact.name }}</label>
+    </div>
+
+    <div class="form-group">
+        <label for="">Apellido</label>
+        <label class="form-control">{{ contact.first_name }}</label>
+    </div>
+
+    <div class="form-group">
+        <label for="">Email</label>
+        <label class="form-control">{{ contact.email }}</label>
+    </div>
+
+    <div class="form-group">
+        <label for="">Telefono</label>
+        <label class="form-control">{{ contact.phone }}</label>
+    </div>
+
+
+</div>
+
+    {% endfor %}
+
+
+
+
+
+
+{% endblock body %}
